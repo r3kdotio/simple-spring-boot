@@ -17,6 +17,10 @@ Swagger
 http://localhost:8080/swagger-ui.html
 
 Docker
+Build
+clean package docker:build
+
+Pull
 docker pull r3kdotio/simple-spring-boot
 
 Kubernetes
