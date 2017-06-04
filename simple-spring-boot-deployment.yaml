@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: simple-spring-boot
+spec:
+  replicas: 4
+  template: # create pods using pod definition in this template
+    metadata:
+      labels:
+        app: simple-spring-boot
+    spec:
+      containers:
+      - name: r3kio-simple-spring-boot
+        image: r3kdotio/simple-spring-boot:latest
+        ports:
+        - containerPort: 8080
+        
+
