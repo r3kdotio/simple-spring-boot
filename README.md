@@ -1,4 +1,7 @@
 
+# Basic usage:
+http://localhost:8080/index.html
+
 ## Basic GET:
 curl -X GET --header 'Accept: text/plain' 'http://localhost:8080/'
 
