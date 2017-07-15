@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Simple Spring Boot App to test Kubernetes</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/default.min.css">
+        <script src="js/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+    </head>
+    <body>
+        <h3>Basic GET:</h3>
+        <pre><code class="java">
+        curl -X GET --header 'Accept: text/plain' 'http://localhost:8080/'
+        </code></pre>
+        <h3>Curl Response Body</h3>
+        <pre><code class="java">
+        RANDOM_ID 882 ip 127.0.1.1 hostname richard-Inspiron-7559
+
+</code></pre>
+        <h3> GET with delay:</h3>
+        <pre><code class="java">
+        http://localhost:8080/?delay=1000
+</code></pre>
+        <h3>GET with kill me System.exit(0);</h3>
+        <pre><code class="java">
+        http://localhost:8080/?killMe=true
+
+</code></pre>
+        <h3>Swagger</h3>
+        <pre><code class="java">
+        http://localhost:8080/swagger-ui.html
+
+</code></pre>
+        <h3>Spring Actuator</h3>
+
+        <a href="https://stackoverflow.com/q/42601681/338249">Play around with your own Actuator</a>
+
+
+        <pre><code class="java">
+        http://localhost:8080/swagger-ui.html
+
+</code></pre>
+
+        <h3>Docker</h3>
+        <h4>Build</h4>
+        <pre><code class="java">
+        clean package docker:build
+</code></pre>
+        <h4>Pull</h4>
+        <pre><code class="java">
+        docker pull r3kdotio/simple-spring-boot
+</code></pre>
+        <h3>Kubernetes</h3>
+        <pre><code class="java">
+        kubectl create -f simple-spring-boot-deployment.yaml
+        kubectl expose deployment simple-spring-boot
+
+</code></pre>
+    </body>
+</html>
